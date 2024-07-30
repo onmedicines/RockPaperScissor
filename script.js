@@ -39,3 +39,16 @@ const playRound = (humanChoice, computerChoice) => {
     console.log("You lose! scissor loses to paper");
   }
 };
+
+const playGame = () => {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+  if (humanScore > computerScore) {
+    console.log("You win!!");
+  } else if (humanScore < computerScore) {
+    console.log("You lose!");
+  } else {
+    console.log("its a tie");
+  }
+};

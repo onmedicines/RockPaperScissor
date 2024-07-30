@@ -9,3 +9,33 @@ const getHumanChoice = () => {
   humanChoice = prompt("what do you choose? :rock, paper or scissor?");
   return humanChoice;
 };
+
+let humanScore, computerScore;
+humanScore = computerScore = 0;
+
+const playRound = (humanChoice, computerChoice) => {
+  let human = humanChoice.toLowerCase();
+  let computer = computerChoice;
+
+  if (human === computer) {
+    console.log("its a tie! both chose " + human);
+  } else if (human === "paper" && computer === "rock") {
+    humanScore++;
+    console.log("You win! paper beats rock");
+  } else if (human === "paper" && computer === "scissor") {
+    computerScore++;
+    console.log("You lose! paper loses to scissor");
+  } else if (human === "rock" && computer === "paper") {
+    computerScore++;
+    console.log("You lose! rock loses to paper");
+  } else if (human === "rock" && computer === "scissor") {
+    humanScore++;
+    console.log("You win! rock beats scissor");
+  } else if (human === "scissor" && computer === "paper") {
+    humanScore++;
+    console.log("You win! scissor beats paper");
+  } else if (human === "scissor" && computer === "rock") {
+    computerScore++;
+    console.log("You lose! scissor loses to paper");
+  }
+};

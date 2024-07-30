@@ -52,3 +52,5 @@ const playGame = () => {
     console.log("its a tie");
   }
 };
+
+playGame();
